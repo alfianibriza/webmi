@@ -46,7 +46,7 @@ const PtsPasIndex = () => {
     }, []);
 
     // Data State
-    const [schedules, setSchedules] = useState<Schedule[]>([]);
+    const [schedules, setSchedules] = useState<any[]>([]);
 
     const fetchSchedules = async () => {
         try {
@@ -89,8 +89,6 @@ const PtsPasIndex = () => {
             setSchedules([...ptsData, ...pasData]);
         } catch (error) {
             console.error("Failed to fetch schedules", error);
-        } finally {
-            setLoading(false);
         }
     };
 

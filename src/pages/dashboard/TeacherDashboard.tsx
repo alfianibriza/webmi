@@ -8,7 +8,6 @@ import {
     LogOut
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { getStorageUrl } from '../../utils';
 
 export default function TeacherDashboard() {
     const { user, logout } = useAuth();

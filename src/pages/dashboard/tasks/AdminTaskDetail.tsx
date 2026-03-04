@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getTask, verifyTaskSubmission } from '../../../api';
 import type { Task, TaskAssignee } from '../../../types';
-import { ArrowLeft, CheckCircle, XCircle, FileText, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, Image as ImageIcon } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export default function AdminTaskDetail() {

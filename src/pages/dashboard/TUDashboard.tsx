@@ -8,7 +8,6 @@ import {
     LayoutDashboard
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { getStorageUrl } from '../../utils';
 
 export default function TUDashboard() {
     const { user, logout } = useAuth();

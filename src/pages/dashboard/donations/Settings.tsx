@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getDonationSettings, updateDonationSettings } from '../../../api';
 import { toast } from 'react-hot-toast';
 
@@ -11,7 +11,7 @@ interface DonationSettings {
 }
 
 export default function DonationSettings() {
-    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<DonationSettings>({
         bank_name: '',
         account_number: '',
@@ -48,7 +48,7 @@ export default function DonationSettings() {
         e.preventDefault();
         setIsSaving(true);
         try {
-            await updateDonationSettings(formData);
+            await updateDonationSettings(formData as any);
             toast.success('Pengaturan donasi berhasil disimpan');
             // Optional: navigate back or stay
         } catch (error) {

@@ -374,7 +374,7 @@ export default function SlotScheduleIndex() {
 
                 {schedules.length === 0 && (
                     <div className="text-center py-12 text-gray-500">
-                        Belum ada jadwal untuk kelas {selectedClass?.grade} {selectedClass?.name}.
+                        Belum ada jadwal untuk kelas {(selectedClass as any)?.grade} {selectedClass?.name}.
                         <br />
                         Klik "Generate Jadwal" untuk membuat jadwal otomatis.
                     </div>

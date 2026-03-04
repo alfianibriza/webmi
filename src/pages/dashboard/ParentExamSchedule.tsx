@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { Calendar, Clock, User, ChevronLeft, School, FileText, TrendingUp, AlertCircle } from 'lucide-react';
+import { Calendar, Clock, User, ChevronLeft, School } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 import { getMySchedules } from '../../api';
@@ -10,7 +10,7 @@ export default function ParentExamSchedule() {
     const [searchParams] = useSearchParams();
     const type = searchParams.get('type') === 'PAS' ? 'PAS' : 'PTS'; // Default to PTS
 
-    const [loading, setLoading] = useState(true);
+    const [, setLoading] = useState(true);
     const [rawExams, setRawExams] = useState<any[]>([]);
 
     useEffect(() => {

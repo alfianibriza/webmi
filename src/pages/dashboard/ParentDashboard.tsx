@@ -9,7 +9,6 @@ import {
     Megaphone
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { getStorageUrl } from '../../utils';
 
 export default function ParentDashboard() {
     const { user, logout } = useAuth();

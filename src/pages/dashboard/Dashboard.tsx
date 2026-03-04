@@ -91,7 +91,7 @@ export default function Dashboard() {
         <Link to="/dashboard/media">
           <StatCard
             title="Total Media"
-            value={stats?.media_count || 0}
+            value={(stats as any)?.media_count || 0}
             icon={<ImageIcon className="w-6 h-6" />}
             gradient="from-purple-500 to-fuchsia-600"
             delay={100}
@@ -100,7 +100,7 @@ export default function Dashboard() {
         <Link to="/dashboard/achievements">
           <StatCard
             title="Total Prestasi"
-            value={stats?.achievements_count || 0}
+            value={(stats as any)?.achievements_count || 0}
             icon={<Award className="w-6 h-6" />}
             gradient="from-orange-400 to-amber-500"
             delay={200}
@@ -110,7 +110,7 @@ export default function Dashboard() {
           <Link to="/dashboard/users">
             <StatCard
               title="Staff & User"
-              value={stats?.users_count || 0}
+              value={(stats as any)?.users_count || 0}
               icon={<Users className="w-6 h-6" />}
               gradient="from-emerald-500 to-teal-600"
               delay={300}

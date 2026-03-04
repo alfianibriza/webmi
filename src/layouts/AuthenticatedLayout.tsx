@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { getActiveAcademicYear, getAcademicYears, setActiveAcademicYear as setActiveAcademicYearApi } from '../api';
+
 import {
   LayoutDashboard,
   FileText,

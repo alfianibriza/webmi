@@ -175,7 +175,7 @@ export default function CreateFinancialObligation() {
                                     name="target_type"
                                     value="all"
                                     checked={formData.target_type === 'all'}
-                                    onChange={e => setFormData({ ...formData, target_type: 'all' })}
+                                    onChange={() => setFormData({ ...formData, target_type: 'all' })}
                                     className="text-brand-green-main focus:ring-brand-green-main"
                                 />
                                 <span>Semua Siswa</span>
@@ -186,7 +186,7 @@ export default function CreateFinancialObligation() {
                                     name="target_type"
                                     value="selected"
                                     checked={formData.target_type === 'selected'}
-                                    onChange={e => setFormData({ ...formData, target_type: 'selected' })}
+                                    onChange={() => setFormData({ ...formData, target_type: 'selected' })}
                                     className="text-brand-green-main focus:ring-brand-green-main"
                                 />
                                 <span>Pilih Siswa Tertentu</span>

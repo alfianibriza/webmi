@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { getAdminDonations, updateDonation, deleteDonation } from '../../../api';
-import { Trash2, CheckCircle, XCircle, Heart } from 'lucide-react';
+import { Trash2, CheckCircle, XCircle } from 'lucide-react';
 import type { Donation } from '../../../types/safe_types';
 import { useAuth } from '../../../contexts/AuthContext';
 import WaliMuridDonations from './WaliMuridDonations';

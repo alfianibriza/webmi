@@ -8,7 +8,7 @@ import type { User } from '../../../types/safe_types';
 export default function UsersIndex() {
   const { user: currentUser } = useAuth();
   const [users, setUsers] = useState<User[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [, setIsLoading] = useState(true);
   const [search, setSearch] = useState('');
 
   // Modal & Form State

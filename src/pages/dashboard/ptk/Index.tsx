@@ -6,7 +6,6 @@ import {
     Trash2,
     Search,
     UserCircle,
-    MapPin,
     Briefcase
 } from 'lucide-react';
 import {

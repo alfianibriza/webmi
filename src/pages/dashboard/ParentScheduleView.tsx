@@ -214,7 +214,6 @@ export default function ParentScheduleView() {
                                 'border-l-rose-500 bg-rose-50/30',
                             ];
                             const colorClass = colors[idx % colors.length];
-                            const badgeColor = colorClass.replace('border-l-', 'text-').replace('bg-', 'bg-').replace('/30', '-100');
 
                             return (
                                 <div key={schedule.id} className={`flex flex-col sm:flex-row gap-4 p-5 rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 border-l-4 ${colorClass}`}>

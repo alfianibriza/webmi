@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getFinancialObligations, deleteFinancialObligation } from '../../../api';
-import { Plus, Trash2, Eye, Calendar, CheckCircle, XCircle, Pencil } from 'lucide-react';
+import { Trash2, Eye, Calendar, CheckCircle, XCircle, Pencil } from 'lucide-react';
 
 interface Obligation {
     id: number;

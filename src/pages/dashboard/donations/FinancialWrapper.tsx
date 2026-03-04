@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom'; // Assuming routing might be used or just local state
+import { Link } from 'react-router-dom'; // Assuming routing might be used or just local state
 import { Heart, Wallet, Plus, Settings } from 'lucide-react';
 import DonationsIndex from './Index';
 import ObligationsIndex from './ObligationsIndex';

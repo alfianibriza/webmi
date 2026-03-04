@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getFinancialObligation, verifyStudentObligation, getClassRooms } from '../../../api';
-import { ArrowLeft, CheckCircle, XCircle, Clock, Calendar, Eye } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, Calendar } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 interface StudentObligation {
@@ -31,7 +31,7 @@ export default function ShowFinancialObligation() {
     const [obligation, setObligation] = useState<Obligation | null>(null);
     const [records, setRecords] = useState<StudentObligation[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState('all');
     const [classrooms, setClassrooms] = useState<any[]>([]);
     const [selectedClassroom, setSelectedClassroom] = useState('all');

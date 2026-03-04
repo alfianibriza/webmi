@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Bell } from "lucide-react";
 import { getMyNotifications, markNotificationAsRead, markAllNotificationsAsRead } from "../api";
-import { useNavigate } from "react-router-dom";
 
 interface Notification {
     id: string;
@@ -21,7 +20,6 @@ export default function NotificationBell() {
     const [unreadCount, setUnreadCount] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-    const navigate = useNavigate();
 
     const fetchNotifications = async () => {
         try {
