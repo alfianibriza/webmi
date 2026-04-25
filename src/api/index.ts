@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Create axios instance with default config
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_API_URL || "/api",
+  withCredentials: true,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -190,7 +191,8 @@ export const getStudentAttendanceExportUrl = (filters?: {
   if (filters?.grade) params.append("grade", filters.grade);
   if (filters?.class_room_id) params.append("class_room_id", filters.class_room_id.toString());
   const token = localStorage.getItem("auth_token");
-  return `/api/admin/student-attendance/export?${params.toString()}&token=${token}`;
+  const baseUrl = import.meta.env.VITE_API_URL || "/api";
+  return `${baseUrl}/admin/student-attendance/export?${params.toString()}&token=${token}`;
 };
 
 export const downloadStudentAttendanceReport = async (filters?: {
@@ -591,7 +593,8 @@ export const rejectSwapRequest = (id: number, notes?: string) =>
 // Export Schedules
 export const getSlotScheduleExportUrl = (type: 'class' | 'teacher' | 'all', id?: number) => {
   const token = localStorage.getItem("auth_token");
-  let url = `/api/admin/slot-schedules/export?type=${type}&token=${token}`;
+  const baseUrl = import.meta.env.VITE_API_URL || "/api";
+  let url = `${baseUrl}/admin/slot-schedules/export?type=${type}&token=${token}`;
   if (type === 'class' && id) url += `&class_room_id=${id}`;
   if (type === 'teacher' && id) url += `&teacher_id=${id}`;
   return url;
